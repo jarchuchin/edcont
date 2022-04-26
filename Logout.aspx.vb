@@ -28,6 +28,8 @@ Partial Class Logout
 
 
 
+
+
         Dim redireccion As String
         If Request("idEmp") <> "" Then
             redireccion = "default.aspx?idEmp=" & Request("idEmp")
