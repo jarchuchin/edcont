@@ -35,6 +35,8 @@ Partial Class Logout
             redireccion = "default.aspx?idEmpresa=" & varempresa & err
         End If
 
+
+
         Response.Redirect(redireccion)
     End Sub
 End Class
