@@ -40,9 +40,9 @@
 
 
     Protected Sub Application_BeginRequest(sender As [Object], e As EventArgs)
-        If HttpContext.Current.Request.IsSecureConnection.Equals(False) AndAlso HttpContext.Current.Request.IsLocal.Equals(False) Then
-            Response.Redirect("https://" + Request.ServerVariables("HTTP_HOST") + HttpContext.Current.Request.RawUrl)
-        End If
+        'If HttpContext.Current.Request.IsSecureConnection.Equals(False) AndAlso HttpContext.Current.Request.IsLocal.Equals(False) Then
+        '    Response.Redirect("https://" + Request.ServerVariables("HTTP_HOST") + HttpContext.Current.Request.RawUrl)
+        'End If
     End Sub
 
 
