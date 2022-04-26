@@ -1,0 +1,189 @@
+﻿<%@ Master Language="VB" CodeFile="MPUsmart05.master.vb" Inherits="MPUsmart05" %>
+
+<%@ Register Src="Controles/Footer.ascx" TagName="Footer" TagPrefix="uc2" %>
+<%@ Register Src="Controles/Header.ascx" TagName="Header" TagPrefix="uc1" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register Src="~/Sec/SalonVirtual/Controles/IndiceContenido.ascx" TagName="Menu" TagPrefix="uc3" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap docs -->
+    <link href="/css/docs.min.css" rel="stylesheet">
+    <!-- font awesome for icons -->
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- animated css  -->
+    <link href="/css/animate.css" rel="stylesheet" type="text/css" media="screen">
+
+
+    <!-- Custom styles for this template footer -->
+    <link href="/css/Skolar.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+   
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+   <link href='http://fonts.googleapis.com/css?family=Doppio+One|Ubuntu' rel='stylesheet' type='text/css' />
+	<asp:Literal ID="literalHead" runat="server"></asp:Literal>
+
+	<script type="text/javascript">
+		$(window).load(function () {
+			$(".accordion").accordion({
+				clearStyle: true,
+				autoHeight: false,
+				fillSpace: true
+			});
+
+			var $colMenu = $("div.colMenu");
+			var $areaWork = $("div.workArea");
+			var $main = $("div.main");
+			var altura = $areaWork.outerHeight();
+			if (altura < $colMenu.outerHeight())
+				altura = $colMenu.outerHeight();
+
+			$main.animate({
+				height: altura + 25
+			});
+
+			$areaWork.animate({
+				height: altura + 25
+			});
+
+		});
+
+		$(document).ready(function () {
+
+			$('.menuClic').click(function () {
+				var $colMenu = $("div.colMenu");
+				var $areaWork = $("div.workArea");
+				var $areaContenido = $("div.areaContenido");
+				var $imgSobreTitulo = $("div.imgSobreTitulo");
+				var leftAreaWork = $areaWork.position().left;
+				var newLeft = 0;
+				var nuevoAncho;
+				var nuevoInicio;
+				var nuevoAnchoImgSobretitulo;
+				var anchoareaContenido = $areaContenido.outerWidth();
+
+
+				if (leftAreaWork == 0) { //área totalmente expandida, menú oculto
+					nuevoAncho = 960 - $colMenu.outerWidth() - 1;
+					nuevoInicio = $colMenu.outerWidth();
+					nuevoAnchoImgSobretitulo = nuevoAncho - 15;
+					anchoareaContenido = 450;
+				} else { //estado inicial
+					nuevoAncho = 960 - 1;
+					nuevoInicio = 0;
+					nuevoAnchoImgSobretitulo = nuevoAncho - 15;
+					anchoareaContenido = 450 + $colMenu.outerWidth();
+				}
+
+				nuevoAncho = nuevoAncho + "px";
+				nuevoInicio += "px";
+
+				$areaWork.animate({
+					left: nuevoInicio,
+					width: nuevoAncho
+				});
+
+				$imgSobreTitulo.animate({
+					width: nuevoAnchoImgSobretitulo 
+				});
+
+				$areaContenido.animate({
+					width: anchoareaContenido
+				});
+
+				if ($(this).attr("class") == "menuClic") {
+					this.src = this.src.replace("_L", "_R");
+				} else {
+					this.src = this.src.replace("_R", "_L");
+				}
+				$(this).toggleClass("on");
+
+			});
+
+		});
+	</script>
+	<style type="text/css">
+		table.acordeon {
+			/*width: 95%;
+			margin-left: 0px; */
+		}
+		.ui-accordion .ui-accordion-content  	{
+			padding: 0.8em 1.0em;
+		}
+		.ui-accordion .ui-accordion-header a {
+			padding: 0.5em;
+		}
+		.ui-widget-content a 
+		{
+			color: #3E9DCE;
+		}
+	</style>
+	<asp:Literal ID="litSript" runat="server"></asp:Literal>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141826806-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141826806-1');
+</script>
+
+ <title>Skolar</title>
+</head>
+<body>
+   <form enctype="multipart/form-data" id="mainForm" runat="server">
+   <asp:ToolkitScriptManager ID="ToolkitScriptManager1" EnableScriptGlobalization="True"  runat="server" AsyncPostBackTimeOut="600" ></asp:ToolkitScriptManager>
+
+            <div class="wrapper">
+		<uc1:Header id="Header1" runat="server" />      
+	
+
+       
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"> 
+                <asp:HyperLink ID="lnkMinilink" runat="server" CssClass="mini-link" Text="Menú del curso" NavigateUrl="~/sec/Default.aspx"></asp:HyperLink>
+            </div>
+            <div class="col-md-8" role="main">
+                <asp:ContentPlaceHolder ID="ContentPlaceBreadcrumb" runat="server"></asp:ContentPlaceHolder>
+                  <div class="workArea">
+				    <asp:ContentPlaceHolder ID="contentPlaceWorkArea" runat="server">
+				    </asp:ContentPlaceHolder>
+			    </div>
+            </div>
+             <div class="col-md-2">
+                 <asp:HyperLink ID="lnkApuntes" runat="server" NavigateUrl="~/Sec/SalonVirtual/Apuntes.aspx?idSalonVirtual=">Mis apuntes</asp:HyperLink>
+                 <uc3:Menu id="Menu1" runat="server" />
+               
+
+            </div>
+            
+        </div>
+    </div>
+
+
+		<uc2:Footer ID="Footer1" runat="server" />
+
+</div>
+</form>
+
+
+</body>
+</html>

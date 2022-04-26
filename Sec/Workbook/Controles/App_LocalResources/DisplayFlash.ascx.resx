@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnBorrarResource1.Text" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="btnBorrarResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnGrabarResource1.Text" xml:space="preserve">
+    <value>Grabar</value>
+  </data>
+  <data name="btnGrabarResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnregresarResource1.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="btnregresarResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomValidator1Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomValidator1Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="CustomValidator1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomValidator2Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomValidator2Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="CustomValidator2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomValidator3Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomValidator3Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="CustomValidator3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="drpUbicacionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Image1Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Image1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label10Resource1.Text" xml:space="preserve">
+    <value>Listo!</value>
+  </data>
+  <data name="Label10Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label11Resource1.Text" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="Label11Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label1Resource1.Text" xml:space="preserve">
+    <value>Editar flash</value>
+  </data>
+  <data name="Label1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label2Resource1.Text" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="Label2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label3Resource1.Text" xml:space="preserve">
+    <value>Ancho</value>
+  </data>
+  <data name="Label3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label4Resource1.Text" xml:space="preserve">
+    <value>Alto</value>
+  </data>
+  <data name="Label4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label5Resource1.Text" xml:space="preserve">
+    <value>Libro de trabajo</value>
+  </data>
+  <data name="Label5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label6Resource1.Text" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="Label6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label9Resource1.Text" xml:space="preserve">
+    <value>Cambios realizados correctamente.</value>
+  </data>
+  <data name="Label9Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEspacioResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEspacioResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblfile1Resource1.Text" xml:space="preserve">
+    <value>Selecciona el archivo</value>
+  </data>
+  <data name="lblfile1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLibroResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLibroResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMensajeBorrarinsideResource1.Text" xml:space="preserve">
+    <value>Para borrar, debes eliminar todos los elementos asociados (En caso de tener respuestas asociadas este elemento no podrá ser borrado)</value>
+  </data>
+  <data name="lblMensajeBorrarinsideResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMensajeEspacioResource1.Text" xml:space="preserve">
+    <value>No hay espacio en su cuenta para subir este contenido</value>
+  </data>
+  <data name="lblMensajeEspacioResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNoarchivo12Resource1.Text" xml:space="preserve">
+    <value>Se esperaba una archivo flash. Selecciona el archivo flash e intenta nuevamente.</value>
+  </data>
+  <data name="lblNoarchivo12Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNombreOriginalResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNombreOriginalResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbltagsResource1.Text" xml:space="preserve">
+    <value>Tags separados por comas</value>
+  </data>
+  <data name="lbltagsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTextoCortoResource1.Text" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="lblTextoCortoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbltextoResource1.Text" xml:space="preserve">
+    <value>Actualizando datos...</value>
+  </data>
+  <data name="lbltextoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbltituloContenidoResource1.Text" xml:space="preserve">
+    <value>Título de archivo</value>
+  </data>
+  <data name="lbltituloContenidoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblUbicacionResource1.Text" xml:space="preserve">
+    <value>Seleccionar unidad</value>
+  </data>
+  <data name="lblUbicacionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="litflasResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkDownloadResource1.Text" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="lnkDownloadResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkVistaPreviaResource1.Text" xml:space="preserve">
+    <value>Vista previa</value>
+  </data>
+  <data name="lnkVistaPreviaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator1Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator1Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator2Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator2Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator3Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator3Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator4Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator4Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtaltoResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtaltoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtanchoResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtanchoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtbaseResource1.Text" xml:space="preserve">
+    <value>&lt;object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase= 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0' width='cancho' height='calto'&gt;&lt;param name='movie' value='pelicula'&gt;&lt;param name='quality' value='high'&gt;&lt;embed src='pelicula' width='cancho' height='calto' quality='high' pluginspage='http://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash' wmode='transparent'&gt;&lt;/embed&gt;&lt;/object&gt;</value>
+  </data>
+  <data name="txtbaseResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtidResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtidResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txttagsResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txttagsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTextoCortoResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTextoCortoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTituloResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTituloResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txturlResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txturlResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ValidationSummary1Resource1.HeaderText" xml:space="preserve">
+    <value>Los campos marcados con * son requeridos o no estan en formato apropiado</value>
+  </data>
+  <data name="ValidationSummary1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

@@ -1,0 +1,873 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnBorrarResource1.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="btnBorrarResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnBorrarRubricaAResource1.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="btnBorrarRubricaAResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnBorrarRubricaResource1.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="btnBorrarRubricaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCancelarRubricaAResource1.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btnCancelarRubricaAResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCancelarRubricaResource1.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btnCancelarRubricaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEditarRubricaAResource1.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="btnEditarRubricaAResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEditarRubricaResource1.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="btnEditarRubricaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnGrabarLigaResource1.Text" xml:space="preserve">
+    <value>Add URL</value>
+  </data>
+  <data name="btnGrabarLigaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnGrabarResource1.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btnGrabarResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnGrabarRubricaAResource1.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btnGrabarRubricaAResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnGrabarRubricaResource1.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btnGrabarRubricaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRefrescarResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRefrescarResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnregresarResource1.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btnregresarResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkActivarRespuestaGrupalResource1.Text" xml:space="preserve">
+    <value>Activate groupal answer</value>
+  </data>
+  <data name="chkActivarRespuestaGrupalResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkMostrarCalificacionResource1.Text" xml:space="preserve">
+    <value>Allow students to see the grade assigned to other students</value>
+  </data>
+  <data name="chkMostrarCalificacionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkMostrarObservacionesResource1.Text" xml:space="preserve">
+    <value>Allow students to see the comments that the instructor gives the answers</value>
+  </data>
+  <data name="chkMostrarObservacionesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkmostrarRespuestasResource1.Text" xml:space="preserve">
+    <value>Allow students to see the other answers</value>
+  </data>
+  <data name="chkmostrarRespuestasResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="drpRespuestaGrupalResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="drpUbicacionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Image1Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Image1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label10Resource1.Text" xml:space="preserve">
+    <value>Ready!</value>
+  </data>
+  <data name="Label10Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label11Resource1.Text" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="Label11Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label12Resource1.Text" xml:space="preserve">
+    <value>Rubric Type B</value>
+  </data>
+  <data name="Label12Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label13Resource1.Text" xml:space="preserve">
+    <value>Rubric Type A</value>
+  </data>
+  <data name="Label13Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label14Resource1.Text" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
+  <data name="Label14Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label15Resource1.Text" xml:space="preserve">
+    <value>Suggestions for instructor</value>
+  </data>
+  <data name="Label15Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label16Resource1.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Label16Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label17Resource1.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Label17Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label18Resource1.Text" xml:space="preserve">
+    <value>Descriptions</value>
+  </data>
+  <data name="Label18Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label19Resource1.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Label19Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label1Resource1.Text" xml:space="preserve">
+    <value>General activity data</value>
+  </data>
+  <data name="Label1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label2Resource1.Text" xml:space="preserve">
+    <value>Advanced configuration</value>
+  </data>
+  <data name="Label2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label3Resource1.Text" xml:space="preserve">
+    <value>Workbook</value>
+  </data>
+  <data name="Label3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label4Resource1.Text" xml:space="preserve">
+    <value>Activity type</value>
+  </data>
+  <data name="Label4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label5Resource1.Text" xml:space="preserve">
+    <value>Files attached</value>
+  </data>
+  <data name="Label5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label6Resource1.Text" xml:space="preserve">
+    <value>Urls and reference links</value>
+  </data>
+  <data name="Label6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label7Resource1.Text" xml:space="preserve">
+    <value>Objetive / Competence</value>
+  </data>
+  <data name="Label7Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label8Resource1.Text" xml:space="preserve">
+    <value>Groupal answer</value>
+  </data>
+  <data name="Label8Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label9Resource1.Text" xml:space="preserve">
+    <value>Changes made correctly.</value>
+  </data>
+  <data name="Label9Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblArchivos1Resource1.Text" xml:space="preserve">
+    <value>Drag and drop the files you want to upload</value>
+  </data>
+  <data name="lblArchivos1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblComoSeCalificaResource1.Text" xml:space="preserve">
+    <value>How it will give grade to this activity?</value>
+  </data>
+  <data name="lblComoSeCalificaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLecturaResource1.Text" xml:space="preserve">
+    <value>General information on this activity</value>
+  </data>
+  <data name="lblLecturaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLibroResource1.Text" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="lblLibroResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLigaTituloResource1.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="lblLigaTituloResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLigaUrlResource1.Text" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="lblLigaUrlResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMensajeBorrarinsideResource1.Text" xml:space="preserve">
+    <value>To delete, you must delete all associated elements (If you have responses associated this element can not be deleted)</value>
+  </data>
+  <data name="lblMensajeBorrarinsideResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMensajeEspacioResource1.Text" xml:space="preserve">
+    <value>There is not enough space on your account to record these files</value>
+  </data>
+  <data name="lblMensajeEspacioResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblQuienCalificaResource1.Text" xml:space="preserve">
+    <value>Who will grade this activity?</value>
+  </data>
+  <data name="lblQuienCalificaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaIDResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaIDResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaTituloResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaTituloResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaVal1DescripcionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaVal1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaVal2DescripcionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaVal2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaVal3DescripcionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaVal3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaVal4DescripcionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaVal4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRubricaVal4Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbltagsResource1.Text" xml:space="preserve">
+    <value>Tags separated by commas</value>
+  </data>
+  <data name="lbltagsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbltextoResource1.Text" xml:space="preserve">
+    <value>Updating data</value>
+  </data>
+  <data name="lbltextoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbltituloContenidoResource1.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="lbltituloContenidoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTituloResource1.Text" xml:space="preserve">
+    <value>Edit activity</value>
+  </data>
+  <data name="lblTituloResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTotalRubricaAResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTotalRubricaAResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblUbicacionResource1.Text" xml:space="preserve">
+    <value>Select folder</value>
+  </data>
+  <data name="lblUbicacionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource10.Text" xml:space="preserve">
+    <value>Anote will be assigned between 0-100</value>
+  </data>
+  <data name="ListItemResource10.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource11.Text" xml:space="preserve">
+    <value>Ranking</value>
+  </data>
+  <data name="ListItemResource11.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource12.Text" xml:space="preserve">
+    <value>Use rubric type A</value>
+  </data>
+  <data name="ListItemResource12.Value" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ListItemResource13.Text" xml:space="preserve">
+    <value>Use rubric type A</value>
+  </data>
+  <data name="ListItemResource13.Value" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ListItemResource14.Text" xml:space="preserve">
+    <value>The teacher will give grade this activity</value>
+  </data>
+  <data name="ListItemResource14.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource15.Text" xml:space="preserve">
+    <value>The students will give grade this activity</value>
+  </data>
+  <data name="ListItemResource15.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ListItemResource3.Value" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ListItemResource4.Value" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ListItemResource5.Text" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ListItemResource5.Value" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ListItemResource6.Text" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="ListItemResource6.Value" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="ListItemResource7.Text" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="ListItemResource7.Value" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="ListItemResource8.Text" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="ListItemResource8.Value" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="ListItemResource9.Text" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ListItemResource9.Value" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="litScriptResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkSalirEdicionResource1.Text" xml:space="preserve">
+    <value>Exit editing</value>
+  </data>
+  <data name="lnkSalirEdicionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkVerRubricaAResource1.Text" xml:space="preserve">
+    <value>Add rubric</value>
+  </data>
+  <data name="lnkVerRubricaAResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkVerRubricaResource1.Text" xml:space="preserve">
+    <value>Add rubric</value>
+  </data>
+  <data name="lnkVerRubricaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkVistaPreviaResource1.Text" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="lnkVistaPreviaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Activity</value>
+  </data>
+  <data name="RangeValidator1Resource1.ErrorMessage" xml:space="preserve">
+    <value>The range is not correct</value>
+  </data>
+  <data name="RangeValidator1Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RangeValidator1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RangeValidator2Resource1.ErrorMessage" xml:space="preserve">
+    <value>The range is not correct</value>
+  </data>
+  <data name="RangeValidator2Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RangeValidator2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RangeValidator3Resource1.ErrorMessage" xml:space="preserve">
+    <value>The range is not correct</value>
+  </data>
+  <data name="RangeValidator3Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RangeValidator3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RangeValidator4Resource1.ErrorMessage" xml:space="preserve">
+    <value>The range is not correct</value>
+  </data>
+  <data name="RangeValidator4Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RangeValidator4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RangeValidator5Resource1.ErrorMessage" xml:space="preserve">
+    <value>The range is not correct</value>
+  </data>
+  <data name="RangeValidator5Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RangeValidator5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rdbComoSeCalificaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rdbQuiencalificaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator1Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator1Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator2Resource1.ErrorMessage" xml:space="preserve">
+    <value>The url reference is a required field</value>
+  </data>
+  <data name="RequiredFieldValidator2Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator3Resource1.ErrorMessage" xml:space="preserve">
+    <value>Required field</value>
+  </data>
+  <data name="RequiredFieldValidator3Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator4Resource1.ErrorMessage" xml:space="preserve">
+    <value>Required field</value>
+  </data>
+  <data name="RequiredFieldValidator4Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator5Resource1.ErrorMessage" xml:space="preserve">
+    <value>Required field</value>
+  </data>
+  <data name="RequiredFieldValidator5Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator6Resource1.ErrorMessage" xml:space="preserve">
+    <value>Required field</value>
+  </data>
+  <data name="RequiredFieldValidator6Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator7Resource1.ErrorMessage" xml:space="preserve">
+    <value>Required field</value>
+  </data>
+  <data name="RequiredFieldValidator7Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator7Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator8Resource1.ErrorMessage" xml:space="preserve">
+    <value>Required field</value>
+  </data>
+  <data name="RequiredFieldValidator8Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator8Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator9Resource1.ErrorMessage" xml:space="preserve">
+    <value>Required field</value>
+  </data>
+  <data name="RequiredFieldValidator9Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator9Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtidResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtidResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtInstruccionesResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtInstruccionesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLigatituloResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLigatituloResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLigaurlResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLigaurlResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtObjetivoCompetenciaResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtObjetivoCompetenciaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtparaInstructorResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtparaInstructorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaAIDResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaAIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaATituloResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaATituloResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaAVal1Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaAVal1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaIDResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaTituloResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaTituloResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaVal1DescripcionResource1.Text" xml:space="preserve">
+    <value>Poor</value>
+  </data>
+  <data name="txtRubricaVal1DescripcionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaVal1Resource1.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtRubricaVal1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaVal2DescripcionResource1.Text" xml:space="preserve">
+    <value>Fair</value>
+  </data>
+  <data name="txtRubricaVal2DescripcionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaVal2Resource1.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtRubricaVal2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaVal3DescripcionResource1.Text" xml:space="preserve">
+    <value>Good</value>
+  </data>
+  <data name="txtRubricaVal3DescripcionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaVal3Resource1.Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtRubricaVal3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaVal4DescripcionResource1.Text" xml:space="preserve">
+    <value>Excellent</value>
+  </data>
+  <data name="txtRubricaVal4DescripcionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRubricaVal4Resource1.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtRubricaVal4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txttagsResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txttagsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTipoXResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTipoXResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTituloResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTituloResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ValidationSummary1Resource1.HeaderText" xml:space="preserve">
+    <value>Fields marked with * are required or are not in proper format</value>
+  </data>
+  <data name="ValidationSummary1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://calendar" xmlns:ns1="http://org.apache.axis2/xsd" targetNamespace="http://calendar" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+		Please Type your service description here
+	</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://calendar">
+      <xs:element name="createCalendar">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createCalendarResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createEvent">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="calendarId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="dateTimeStart" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="dateTimeEnd" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createEventResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteCalendar">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="calendarId" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteCalendarResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="editEvent">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="calendarId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="eventId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="dateTimeStart" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="dateTimeEnd" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="editEventResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteEvent">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="calendarId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="eventId" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteEventResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createCalendarACL">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="calendarId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createCalendarACLResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="createEventRequest">
+    <wsdl:part name="parameters" element="ns:createEvent" />
+  </wsdl:message>
+  <wsdl:message name="createEventResponse">
+    <wsdl:part name="parameters" element="ns:createEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="createCalendarRequest">
+    <wsdl:part name="parameters" element="ns:createCalendar" />
+  </wsdl:message>
+  <wsdl:message name="createCalendarResponse">
+    <wsdl:part name="parameters" element="ns:createCalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteCalendarRequest">
+    <wsdl:part name="parameters" element="ns:deleteCalendar" />
+  </wsdl:message>
+  <wsdl:message name="deleteCalendarResponse">
+    <wsdl:part name="parameters" element="ns:deleteCalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="editEventRequest">
+    <wsdl:part name="parameters" element="ns:editEvent" />
+  </wsdl:message>
+  <wsdl:message name="editEventResponse">
+    <wsdl:part name="parameters" element="ns:editEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="createCalendarACLRequest">
+    <wsdl:part name="parameters" element="ns:createCalendarACL" />
+  </wsdl:message>
+  <wsdl:message name="createCalendarACLResponse">
+    <wsdl:part name="parameters" element="ns:createCalendarACLResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteEventRequest">
+    <wsdl:part name="parameters" element="ns:deleteEvent" />
+  </wsdl:message>
+  <wsdl:message name="deleteEventResponse">
+    <wsdl:part name="parameters" element="ns:deleteEventResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CalendarPortType">
+    <wsdl:operation name="createEvent">
+      <wsdl:input wsaw:Action="urn:createEvent" message="ns:createEventRequest" />
+      <wsdl:output wsaw:Action="urn:createEventResponse" message="ns:createEventResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="createCalendar">
+      <wsdl:input wsaw:Action="urn:createCalendar" message="ns:createCalendarRequest" />
+      <wsdl:output wsaw:Action="urn:createCalendarResponse" message="ns:createCalendarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCalendar">
+      <wsdl:input wsaw:Action="urn:deleteCalendar" message="ns:deleteCalendarRequest" />
+      <wsdl:output wsaw:Action="urn:deleteCalendarResponse" message="ns:deleteCalendarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="editEvent">
+      <wsdl:input wsaw:Action="urn:editEvent" message="ns:editEventRequest" />
+      <wsdl:output wsaw:Action="urn:editEventResponse" message="ns:editEventResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="createCalendarACL">
+      <wsdl:input wsaw:Action="urn:createCalendarACL" message="ns:createCalendarACLRequest" />
+      <wsdl:output wsaw:Action="urn:createCalendarACLResponse" message="ns:createCalendarACLResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteEvent">
+      <wsdl:input wsaw:Action="urn:deleteEvent" message="ns:deleteEventRequest" />
+      <wsdl:output wsaw:Action="urn:deleteEventResponse" message="ns:deleteEventResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalendarSoap11Binding" type="ns:CalendarPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="createEvent">
+      <soap:operation soapAction="urn:createEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCalendar">
+      <soap:operation soapAction="urn:createCalendar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCalendar">
+      <soap:operation soapAction="urn:deleteCalendar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editEvent">
+      <soap:operation soapAction="urn:editEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCalendarACL">
+      <soap:operation soapAction="urn:createCalendarACL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEvent">
+      <soap:operation soapAction="urn:deleteEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CalendarSoap12Binding" type="ns:CalendarPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="createEvent">
+      <soap12:operation soapAction="urn:createEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCalendar">
+      <soap12:operation soapAction="urn:createCalendar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCalendar">
+      <soap12:operation soapAction="urn:deleteCalendar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editEvent">
+      <soap12:operation soapAction="urn:editEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCalendarACL">
+      <soap12:operation soapAction="urn:createCalendarACL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEvent">
+      <soap12:operation soapAction="urn:deleteEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CalendarHttpBinding" type="ns:CalendarPortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="createEvent">
+      <http:operation location="createEvent" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCalendar">
+      <http:operation location="createCalendar" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCalendar">
+      <http:operation location="deleteCalendar" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editEvent">
+      <http:operation location="editEvent" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCalendarACL">
+      <http:operation location="createCalendarACL" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEvent">
+      <http:operation location="deleteEvent" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Calendar">
+    <wsdl:port name="CalendarHttpSoap11Endpoint" binding="ns:CalendarSoap11Binding">
+      <soap:address location="http://centauro.um.edu.mx/CalendarSkolar/services/Calendar.CalendarHttpSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="CalendarHttpSoap12Endpoint" binding="ns:CalendarSoap12Binding">
+      <soap12:address location="http://centauro.um.edu.mx/CalendarSkolar/services/Calendar.CalendarHttpSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="CalendarHttpEndpoint" binding="ns:CalendarHttpBinding">
+      <http:address location="http://centauro.um.edu.mx/CalendarSkolar/services/Calendar.CalendarHttpEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

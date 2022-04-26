@@ -1,0 +1,60 @@
+﻿<%@ Master Language="VB" CodeFile="MPUsmart06.master.vb" Inherits="MPUsmart06" %>
+
+<%@ Register Src="Controles/Footer.ascx" TagName="Footer" TagPrefix="uc2" %>
+<%@ Register Src="Controles/Header.ascx" TagName="Header" TagPrefix="uc1" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+	<title>Skolar 2012</title> 
+	<link href='http://fonts.googleapis.com/css?family=Doppio+One|Ubuntu' rel='stylesheet' type='text/css' />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141826806-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141826806-1');
+</script>
+
+</head>
+<body>
+
+	<form enctype="multipart/form-data" id="mainForm" runat="server">
+             <asp:ToolkitScriptManager ID="ToolkitScriptManager1" EnableScriptGlobalization="True"  runat="server" AsyncPostBackTimeOut="600" ></asp:ToolkitScriptManager>
+
+
+	<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td style="height:45px;" class="bg-head1">
+			<uc1:Header id="Header1" runat="server" />      
+		</td>
+	</tr>
+	<tr>
+		<td style="height:33px;" class="bg-head2">
+			<asp:ContentPlaceHolder ID="ContentPanelBreadcrumb" runat="server">
+			</asp:ContentPlaceHolder>
+		</td>
+	</tr>
+	<tr>
+		<td style="background-color:#ffffff;">
+			<div style="padding: 0 80px 0 80px;">
+				<asp:ContentPlaceHolder ID="ContentPanelCentral" runat="server">
+				</asp:ContentPlaceHolder>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="text-align:center;">
+			<uc2:Footer ID="Footer1" runat="server" />   
+		</td>
+	</tr>
+	</table>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+﻿Imports MailBee
+Imports MailBee.Mime
+Imports MailBee.ImapMail
+Imports System.Data
+
+
+Partial Class Sec_Controles_displayMailBox
+    Inherits System.Web.UI.UserControl
+
+
+    '  Private imp As Imap = Nothing
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If Not IsPostBack Then
+            Dim myu As MasUsuarios.UserProfile = New MasUsuarios.UserProfile(CInt(Session("gUserProfileSession").idUserProfile), False)
+            If myu.emailGoogle.Length > 0 And myu.emailGooglePassword.Length > 0 Then
+                '    colocarDatos(myu.emailGoogle, myu.emailGooglePassword)
+            Else
+                lnkConfiguracion.Visible = True
+                lnkActualizar.Visible = False
+            End If
+
+        End If
+    End Sub
+
+    Sub colocarDatos(ByVal email As String, ByVal pass As String)
+        Dim dv As DataView
+        If IsNothing(Session("mail")) Then
+            dv = GetTablaMensajes(email, pass)
+            Session("mail") = dv
+        Else
+            dv = Session("mail")
+        End If
+
+        dtgMensajes.DataSource = dv
+        dtgMensajes.DataBind()
+
+
+    End Sub
+
+    Function GetTablaMensajes(ByVal email As String, ByVal pass As String) As DataView
+
+
+        Dim dTable As New DataTable
+        dTable.Columns.Add(New DataColumn("index", GetType(Integer)))
+        dTable.Columns.Add(New DataColumn("fromCorreo", GetType(String)))
+        dTable.Columns.Add(New DataColumn("fromNombre", GetType(String)))
+        dTable.Columns.Add(New DataColumn("subject", GetType(String)))
+        dTable.Columns.Add(New DataColumn("fecha", GetType(Date)))
+        dTable.Columns.Add(New DataColumn("mensaje", GetType(String)))
+        dTable.Columns.Add(New DataColumn("leido", GetType(Boolean)))
+        dTable.Columns.Add(New DataColumn("liga", GetType(String)))
+        Dim dRow As DataRow
+        Dim imp As New Imap
+
+        Try
+
+            ' Imap.LicenseKey = "MN200-4B8383BD83A183EC838DF9CD8DA8-B8AE"
+
+
+            imp.SslMode = Security.SslStartupMode.OnConnect
+            imp.Connect("imap.gmail.com", 993)
+            imp.Login(email, pass, AuthenticationMethods.Regular)
+            imp.SelectFolder("Inbox")
+
+
+
+
+
+            Dim range As String
+
+            ' Does the inbox contain at least 10 mails?
+            If imp.MessageCount >= 10 Then
+                ' We'll get last 10 mails.
+                range = (imp.MessageCount - 9).ToString() & ":" & "*"
+            Else
+                ' We'll get all mails.
+                range = Imap.AllMessages
+            End If
+
+            ' Get envelopes for the specified messages.
+            Dim envelopes As EnvelopeCollection = imp.DownloadEnvelopes(range, False)
+
+            ' Make newer messages be displayed first.
+            envelopes.Reverse()
+
+            For Each env As Envelope In envelopes
+
+
+                dRow = dTable.NewRow()
+                dRow(0) = env.MessageNumber
+                dRow(1) = env.From.Email
+                If env.From.DisplayName.ToString <> "" Then
+                    dRow(2) = env.From.DisplayName
+                    dRow(3) = env.Subject.ToString
+                Else
+                    dRow(2) = env.Subject.ToString
+                    dRow(3) = env.From.Email
+                End If
+
+                dRow(4) = CDate(env.Date)
+                dRow(5) = ""
+                dRow(6) = False
+                'dRow(7) = "http://mail.google.com/a/um.edu.mx/?account_id=" & Server.HtmlEncode(email) & "&message_id=" & Server.HtmlEncode(env.MessageNumber) & "&view=conv&extsrc=ig"
+                If email.ToLower.Contains("alumno.um.edu.mx") Then
+                    dRow(7) = "http://mail.google.com/a/alumno.um.edu.mx/?account_id=" & Server.HtmlEncode(email) & "&id=" & env.Uid
+                Else
+                    dRow(7) = "http://mail.google.com/a/um.edu.mx/?account_id=" & Server.HtmlEncode(email) & "&id=" & env.Uid
+                End If
+
+
+                dTable.Rows.Add(dRow)
+
+                'Console.WriteLine("Message #" & env.MessageNumber)
+                'Console.WriteLine("From: " & env.From.ToString())
+                'Console.WriteLine("To: " & env.To.ToString())
+                'Console.WriteLine("Subject: " & env.Subject)
+                'Console.WriteLine()
+            Next
+
+
+
+
+
+
+
+
+
+        Catch ex As MailBeeException
+            litmensajes.Text = "<font color=""red"">" & ex.Message & "</font>"
+        Finally
+
+            If Not imp Is Nothing Then
+                If imp.IsConnected Then
+                    Try
+                        imp.Disconnect()
+                    Catch exc As MailBeeException
+                        litmensajes.Text = "<font color=""red"">" & exc.Message & "</font>"
+                    End Try
+                End If
+            End If
+
+        End Try
+
+
+
+        Dim dView As New DataView(dTable)
+        Return dView
+
+    End Function
+
+    Protected Sub btnActualiza_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles lnkActualizar.Click
+        System.Threading.Thread.Sleep(1500)
+        Dim myu As MasUsuarios.UserProfile = New MasUsuarios.UserProfile(CInt(Session("gUserProfileSession").idUserProfile), False)
+        Dim dv As DataView
+        dv = GetTablaMensajes(myu.emailGoogle, myu.emailGooglePassword)
+        Session("mail") = dv
+
+        dtgMensajes.DataSource = dv
+        dtgMensajes.DataBind()
+    End Sub
+End Class

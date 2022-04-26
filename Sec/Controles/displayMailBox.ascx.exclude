@@ -1,0 +1,68 @@
+﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="displayMailBox.ascx.vb" Inherits="Sec_Controles_displayMailBox" %>
+<div style=" text-align:left; width:300px;">
+
+<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+<ContentTemplate>
+
+<table style=" width:480px;" align="left">
+<tr>
+<td>
+ <asp:UpdateProgress ID="UpdateProgress1" AssociatedUpdatePanelID="UpdatePanel1" runat="server" DisplayAfter="0">
+        <ProgressTemplate>
+            <div style="text-align: left">
+                <asp:Image runat="server" ID="Image1" ImageUrl="~/Images/indicator.gif" ></asp:Image>
+                <asp:Label runat="server" Text="Descargando mensajes..." Font-Size="11px" ID="lblmensajesdescarga" CssClass="TextoDescripcionSalon" ></asp:Label>
+            </div>
+        </ProgressTemplate>
+        
+    </asp:UpdateProgress>
+</td>
+<td><div style=" text-align:right;"> 
+    <asp:LinkButton ID="lnkActualizar" Text="Actualizar" CssClass="LigaVerde" runat="server"></asp:LinkButton> </div></td>
+</tr>
+<tr>
+<td colspan="2">
+<asp:datagrid id="dtgMensajes" AutoGenerateColumns="False"  runat="server"  Font-Size="11px" Width="480px" HorizontalAlign="Left" ShowHeader="false">
+	            <AlternatingItemStyle BackColor="#F0F0F0"></AlternatingItemStyle>
+	            <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
+	            <Columns>
+	            <asp:TemplateColumn>
+			            <HeaderStyle ></HeaderStyle>
+			            <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle"></ItemStyle>
+			            <ItemTemplate>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("liga") %>' CssClass="LigaGris" Target="_blank"><%# Eval("fromNombre") %></asp:HyperLink>
+			                <br />
+				            <asp:Label id="Label1" runat="server" Font-Bold="True" Text='<%# Eval("subject") %>' CssClass="TextoDescripcionSalon" Font-Size="11px">
+				            </asp:Label>
+				            <asp:HyperLink ID="HyperLink2" runat="server" Visible="false" NavigateUrl='<%# "http://mail.google.com/a/um.edu.mx/mail?view=cm&tf=0&to=" & eval("fromCorreo") %>' CssClass="LigaGris" Target="_blank">Responder</asp:HyperLink>
+				            
+				            
+			            </ItemTemplate>
+		            </asp:TemplateColumn>
+		            <asp:TemplateColumn>
+			            <HeaderStyle Width="70px"></HeaderStyle>
+			            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="70px"></ItemStyle>
+			            <ItemTemplate>
+				            <asp:Label id="Labdel1" runat="server" Font-Bold="True" Text='<%# DataBinder.Eval(Container, "DataItem.fecha", "{0:MMM dd}") %>' CssClass="TextoDescripcionSalon" Font-Size="12px">
+				            </asp:Label><br />
+				            <asp:Label id="Label2"   Font-Size="11px" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.fecha", "{0:hh:mm tt}") %>' CssClass="TextoDescripcionSalon">
+				            </asp:Label>
+			            </ItemTemplate>
+		            </asp:TemplateColumn>
+		          
+	            </Columns>
+            </asp:datagrid>
+
+</td>
+</tr>
+</table>
+
+
+</ContentTemplate>
+</asp:UpdatePanel>
+<br />
+    <asp:HyperLink ID="lnkConfiguracion" CssClass="LigaGris" Visible="false" runat="server" Target="_parent" NavigateUrl="~/Sec/DatosPersonales.aspx">Configurar correo electronico UM</asp:HyperLink>
+<br />
+<asp:Literal ID="litmensajes" runat="server"></asp:Literal>
+
+</div>

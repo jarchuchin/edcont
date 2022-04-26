@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alumno>
+	<Dato>
+		<nombresAlumno>Jairo Miguel</nombresAlumno>
+		<apellidosAlumno>Lopez Arenas</apellidosAlumno>
+		<sexoAlumno>H</sexoAlumno>
+		<fechaNacimiento>24/11/1989</fechaNacimiento>
+		<correoAlumno>jajo@test.com</correoAlumno>
+		<paginaAlumno>www.test.al</paginaAlumno>
+		<movilAlumno>8261783946</movilAlumno>
+		<direccionAlumno>conocido</direccionAlumno>
+		<ciudadAlumno>monterancho</ciudadAlumno>
+		<estadoAlumno>Nuevo Leon</estadoAlumno>
+		<paisAlumno>Mexico</paisAlumno>
+		<matriculaAlumno>1038492</matriculaAlumno>
+    </Dato>
+</Alumno>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Carga>
+	<Materia>
+		<nombreMateria>Investigacion de Operaciones</nombreMateria>
+		<nombreMaestro>Daniel Gutierrez</nombreMaestro>
+		<puntosCalificados>12.3</puntosCalificados>
+		<puntosObtenidos>11</puntosObtenidos>
+		<creditosMateria>25</creditosMateria>
+		<claveMateria>AK24AVE0K31</claveMateria>
+		<matriculaAlumno>1040436</matriculaAlumno>
+	</Materia>
+	<Materia>
+		<nombreMateria>Tecnologias Emergentes</nombreMateria>
+		<nombreMaestro>Carlos</nombreMaestro>
+		<puntosCalificados>32.5</puntosCalificados>
+		<puntosObtenidos>20</puntosObtenidos>
+		<creditosMateria>19</creditosMateria>
+		<claveMateria>AKD2442KK31</claveMateria>
+		<matriculaAlumno>1040436</matriculaAlumno>
+	</Materia>
+</Carga>

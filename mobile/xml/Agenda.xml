@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Agenda>
+	<Tarea>
+		<nombreTarea>Tarea 2.3</nombreTarea>
+		<nombreMateriaTarea>Axiologia V</nombreMateriaTarea>
+		<horaEntrega>22:00</horaEntrega>
+		<fechaEntrega>19/05/2011</fechaEntrega>
+		<infoTarea>Investigar sobre  esto y otro....</infoTarea>
+		<claveMateria>AKD2442KK31</claveMateria>
+		<matriculaAlumno>1070236</matriculaAlumno>
+	</Tarea>
+	<Tarea>
+		<nombreTarea>Examen</nombreTarea>
+		<nombreMateria>Compiladores</nombreMateria>
+		<horaEntrega>16:00</horaEntrega>
+		<fechaEntrega>17/05/2011</fechaEntrega>
+		<infoTarea>Contestar examen....</infoTarea>
+		<claveMateria>24A9442KK31</claveMateria>
+		<matriculaAlumno>1070236</matriculaAlumno>
+	</Tarea>
+</Agenda>

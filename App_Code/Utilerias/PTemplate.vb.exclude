@@ -1,0 +1,28 @@
+
+Imports System
+Imports System.Web
+Imports System.Web.UI
+Imports System.Web.UI.WebControls
+
+Public Class PTemplate
+    Implements ITemplate
+
+    Public Text As String
+
+
+    Sub InstantiateIn(ByVal conteiner As Control) Implements ITemplate.InstantiateIn
+        Dim myl As Label = New Label
+        myl.Text = Me.Text
+
+    End Sub
+
+
+
+End Class
+
+public void InstantiateIn(Control container)        
+	{            
+Label label = new Label();            
+label.Text = "Updating with new ProgressTemplate";            
+container.Controls.Add(label);        
+	}

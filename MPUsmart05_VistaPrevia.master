@@ -1,0 +1,259 @@
+﻿<%@ Master Language="VB" CodeFile="MPUsmart05_VistaPrevia.master.vb" Inherits="MPUsmart05_VistaPrevia" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register Src="~/Sec/SalonVirtual/Controles/IndiceContenido.ascx" TagName="Menu" TagPrefix="uc3" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+   <title>Skolar 2012</title> 
+   <link href='http://fonts.googleapis.com/css?family=Doppio+One|Ubuntu' rel='stylesheet' type='text/css' />
+	<asp:Literal ID="literalHead" runat="server"></asp:Literal>
+   <script type="text/javascript">
+       (function (i, s, o, g, r, a, m) {
+           i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+               (i[r].q = i[r].q || []).push(arguments)
+           }, i[r].l = 1 * new Date(); a = s.createElement(o),
+           m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+       })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+       ga('create', 'UA-12099384-1', 'um.edu.mx');
+       ga('send', 'pageview');
+
+</script>
+	<script type="text/javascript">
+		$(window).load(function () {
+			$(".accordion").accordion({
+				clearStyle: true,
+				autoHeight: false,
+				fillSpace: true
+			});
+
+			var $colMenu = $("div.colMenu");
+			var $areaWork = $("div.workArea");
+			var $main = $("div.main");
+			var altura = $areaWork.outerHeight();
+			if (altura < $colMenu.outerHeight())
+				altura = $colMenu.outerHeight();
+
+			$main.animate({
+				height: altura + 25
+			});
+
+			$areaWork.animate({
+				height: altura + 25
+			});
+
+		});
+
+		$(document).ready(function () {
+
+			$('.menuClic').click(function () {
+				var $colMenu = $("div.colMenu");
+				var $areaWork = $("div.workArea");
+				var $areaContenido = $("div.areaContenido");
+				var $imgSobreTitulo = $("div.imgSobreTitulo");
+				var leftAreaWork = $areaWork.position().left;
+				var newLeft = 0;
+				var nuevoAncho;
+				var nuevoInicio;
+				var nuevoAnchoImgSobretitulo;
+				var anchoareaContenido = $areaContenido.outerWidth();
+
+
+				if (leftAreaWork == 0) { //área totalmente expandida, menú oculto
+					nuevoAncho = 960 - $colMenu.outerWidth() - 1;
+					nuevoInicio = $colMenu.outerWidth();
+					nuevoAnchoImgSobretitulo = nuevoAncho - 15;
+					anchoareaContenido = 450;
+				} else { //estado inicial
+					nuevoAncho = 960 - 1;
+					nuevoInicio = 0;
+					nuevoAnchoImgSobretitulo = nuevoAncho - 15;
+					anchoareaContenido = 450 + $colMenu.outerWidth();
+				}
+
+				nuevoAncho = nuevoAncho + "px";
+				nuevoInicio += "px";
+
+				$areaWork.animate({
+					left: nuevoInicio,
+					width: nuevoAncho
+				});
+
+				$imgSobreTitulo.animate({
+					width: nuevoAnchoImgSobretitulo
+				});
+
+				$areaContenido.animate({
+					width: anchoareaContenido
+				});
+
+				if ($(this).attr("class") == "menuClic") {
+					this.src = this.src.replace("_L", "_R");
+				} else {
+					this.src = this.src.replace("_R", "_L");
+				}
+				$(this).toggleClass("on");
+
+			});
+
+		});
+	</script>
+	<style type="text/css">
+		.ui-accordion .ui-accordion-content  	{
+			padding: 0.8em 1.0em;
+		}
+		.ui-accordion .ui-accordion-header a {
+			padding: 0.5em;
+		}
+		.ui-widget-content a 
+		{
+			color: #3E9DCE;
+		}
+	</style>
+	<asp:Literal ID="litSript" runat="server"></asp:Literal>
+</head>
+<body>
+
+<form id="form1" runat="server">
+
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" EnableScriptGlobalization="True"  runat="server" AsyncPostBackTimeOut="600" ></asp:ToolkitScriptManager>
+
+
+<table style="width:960px; border: 0;" cellpadding="0" cellspacing="0" align="center">
+
+<tr>
+	<td height="45" valign="top" class="bg-head1" scope="row">
+		<table style="width:100%;" border="0" cellspacing="5" cellpadding="0">
+		<tr>
+			<td style="width:75px; text-align:center;"><asp:HyperLink ID="lnkhome" NavigateUrl="~/sec/home.aspx" ImageUrl="~/images/logo-Skolar.png" runat="server" Visible="True"></asp:HyperLink></td>
+			<td style="width:207px;" class="txt-head">Sistema Skolar</td>
+			<td style="width:139px" class="txt-head"><asp:Label ID="lblFecha" runat="server" ></asp:Label></td>
+			<td style="width:133px; text-align:right;" class="txt-head"><asp:Label ID="lblnombre" runat="server"  ></asp:Label></td>
+			<td style="width:50px;text-align:right;"><asp:Image ID="imgProfile" runat="server"  ImageUrl="~/Images/foto-head.png"  width="30px"  Visible="false"/></td>
+			<td style="width:321px; text-align:right;">
+				<table border="0" cellpadding="0" cellspacing="8">
+				<tr>
+					<td><asp:HyperLink ID="lnkmiportal" runat="server" NavigateUrl="~/Sec/Default.aspx"  Enabled="False" CssClass="menu-head" >Mi portal</asp:HyperLink></td>
+					<td><asp:HyperLink ID="lnkCursos" runat="server" NavigateUrl="~/Sec/Default.aspx" Enabled="False" CssClass="menu-head" >Cursos</asp:HyperLink></td>
+					<td><asp:HyperLink ID="lnkLibrosDeTrabajo" runat="server" NavigateUrl="~/Sec/libros.aspx"  Enabled="False" CssClass="menu-head" >Libros de Trabajo</asp:HyperLink></td>
+					<td><asp:HyperLink ID="lnkBiblioteca" runat="server" NavigateUrl="~/Sec/Biblioteca.aspx"  Enabled="False" CssClass="menu-head" >Biblioteca</asp:HyperLink></td>
+					<td><asp:HyperLink ID="lnkPerfil" runat="server" NavigateUrl="~/Sec/DatosPersonales.aspx"  Enabled="False" CssClass="menu-head" >Perfil</asp:HyperLink></td>
+					<td><asp:HyperLink ID="lnkSalir" runat="server" NavigateUrl="~/logout.aspx"  CssClass="menu-head" Enabled="false" >Salir</asp:HyperLink></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td style="height:33px;" class="bg-head2">
+
+		<table style="width:100%; border:0;" cellspacing="0" cellpadding="0">
+		<tr>
+			<td style="height:33px;" class="bg-head2">
+				<table style="width:100%; border:0;" cellspacing="0" cellpadding="0">
+				<tr>
+					<td style="width:259px; height:33px; vertical-align:bottom;" align="center" class="bg-left-head2">
+						<table style="width:90%; border:0;"  cellspacing="0" cellpadding="0">
+						<tr>
+							<td style="text-align:left;">
+								<asp:Image ID="Image1" runat="server" ImageUrl="~/Images/bull-arrow2.png" />
+								<asp:Label ID="lblTagCurso" runat="server" CssClass="gris-claro12">Menú del curso</asp:Label>
+							</td>
+							<td style="text-align:right;"><asp:Image ID="Image2" runat="server" ImageUrl="~/Images/btn-colapse_L.png" CssClass="menuClic" /></td>
+						</tr>
+						</table>
+					</td>
+					<td>
+						<table style="width:100%; border:0;" cellpadding="0" cellspacing="0">
+						<tr>
+							<td style="width:77%;">
+								<asp:ContentPlaceHolder ID="ContentPlaceBreadcrumb" runat="server">
+								</asp:ContentPlaceHolder>
+							</td>
+							<td style="width:23%; text-align:right;">
+								<table style="width:100%; border:0;" cellpadding="0" cellspacing="8">
+								<tr>
+									<td>
+										<table>
+										<tr>
+											<td style="width:23px;"><asp:Image ID="Image3" runat="server" ImageUrl="~/Images/ico-apuntes.png" /></td>
+											<td><asp:HyperLink ID="lnkApuntes" runat="server" Enabled="false">Mis apuntes</asp:HyperLink></td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+
+	</td>
+</tr>
+
+<!-- main -->
+<tr>
+	<td>
+		<div class="main">
+			<div class="colMenu">
+					<table style="width:100%;" cellpadding="0" cellspacing="0" class="box-brdr-botom">
+					<tr>
+						<td align="center" class="seccion">ÍNDICE</td>
+					</tr>
+					<tr>
+						<td valign="top" align="center">
+							<div style="height:inherit;">
+							<div class="accordion">
+								<uc3:Menu id="Menu1" runat="server" />
+							</div>
+							</div>
+						</td>
+					</tr>
+					</table>
+			</div>
+
+			<div class="workArea">
+				<asp:ContentPlaceHolder ID="contentPlaceWorkArea" runat="server">
+				</asp:ContentPlaceHolder>
+			</div>
+
+		</div>
+		
+	</td>
+</tr>
+
+<!-- footer -->
+<tr>
+	<td align="center" valign="top">
+		<table style="width:100%;" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td style="text-align:center;" bgcolor="#DFDFDF">
+				<span class="gris-claro">
+					<asp:HyperLink ID="lnkum" CssClass="gris-claro" runat="server" NavigateUrl="http://Skolar.online" Text="Skolar"></asp:HyperLink> &nbsp; /&nbsp;
+					Derechos Reservados 2012&nbsp; /&nbsp;
+					<asp:Label ID="lblUsuarios" runat="server" Text="Usuarios conectados: "></asp:Label>
+				</span>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</form>
+
+
+
+
+</body>
+</html>

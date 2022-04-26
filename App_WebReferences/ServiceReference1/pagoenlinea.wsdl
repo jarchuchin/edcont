@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://spring.io/guides/gs-producing-web-service" xmlns:tns="http://spring.io/guides/gs-producing-web-service" targetNamespace="http://spring.io/guides/gs-producing-web-service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://spring.io/guides/gs-producing-web-service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getPagoRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="tarjeta" type="xs:string" />
+            <xs:element name="tarjetaTipo" type="xs:string" />
+            <xs:element name="fechaVencimiento" type="xs:string" />
+            <xs:element name="cvv" type="xs:string" />
+            <xs:element name="monto" type="xs:string" />
+            <xs:element name="comentario" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPagoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="respuesta" type="tns:respuesta" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="respuesta">
+        <xs:sequence>
+          <xs:element name="authorizationCode" type="xs:string" />
+          <xs:element name="confirmationNumber" type="xs:string" />
+          <xs:element name="resultMessage" type="xs:string" />
+          <xs:element name="returnCode" type="xs:string" />
+          <xs:element name="returnCodeId" type="xs:string" />
+          <xs:element name="totalAmount" type="xs:string" />
+          <xs:element name="settlementSubmissionDate" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getPagoResponse">
+    <wsdl:part name="getPagoResponse" element="tns:getPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPagoRequest">
+    <wsdl:part name="getPagoRequest" element="tns:getPagoRequest" />
+  </wsdl:message>
+  <wsdl:portType name="PagoEnLineaPort">
+    <wsdl:operation name="getPago">
+      <wsdl:input name="getPagoRequest" message="tns:getPagoRequest" />
+      <wsdl:output name="getPagoResponse" message="tns:getPagoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PagoEnLineaPortSoap11" type="tns:PagoEnLineaPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getPago">
+      <soap:operation soapAction="" />
+      <wsdl:input name="getPagoRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPagoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PagoEnLineaPortService">
+    <wsdl:port name="PagoEnLineaPortSoap11" binding="tns:PagoEnLineaPortSoap11">
+      <soap:address location="http://172.16.254.22:8080/Icverify_UM-0.0.1-SNAPSHOT/ws" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

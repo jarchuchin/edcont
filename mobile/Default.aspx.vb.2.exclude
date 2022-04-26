@@ -1,0 +1,38 @@
+
+Partial Class mobile_Default
+    Inherits System.Web.UI.MobileControls.MobilePage
+
+    Protected Sub btnEnviar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnEnviar.Click
+
+
+        Dim myU As MasUsuarios.UserProfile = New MasUsuarios.UserProfile()
+        'cada empresa tendra decidira si consume una validacion personalizada o no
+        Dim clave As Integer = myU.AutenticadoClaveUser(txtlogin.Text, txtpassword.Text, 4, False)
+        If clave > 0 Then
+            myU = New MasUsuarios.UserProfile(clave, True)
+            Dim myEmpresaUserProfile As New MasUsuarios.EmpresaUserProfile(clave, 4)
+            Dim myfcf As New UM.Fes_Contrato_Financiero(myEmpresaUserProfile.claveAux1, Date.Now)
+            If myfcf.existedato Then
+                lblMensajeerror1.Visible = True
+                lblMensajeerror1.Text = "El sistema financiero reporta un adeudo por: " & Format(myfcf.importe, "c") & " que ha vencido en la fecha: " & myfcf.fecha_vencimiento.ToLongDateString
+            Else
+                Session("gUserProfileSession") = myU.GetUserProfilesSession()
+                If Request.QueryString("ReturnUrl") <> "" Then
+                    FormsAuthentication.RedirectFromLoginPage(txtlogin.Text.ToString, False)
+                Else
+                    FormsAuthentication.SetAuthCookie(txtlogin.Text, False)
+                    If myU.emailGoogle <> "" Then
+                        Response.Redirect("~/mobile/sec/default.aspx")
+                    Else
+                        Response.Redirect("~/mobile/DatosPersonales.aspx")
+                    End If
+                End If
+            End If
+
+
+        Else
+            lblMensajeError.Visible = True
+        End If
+
+    End Sub
+End Class

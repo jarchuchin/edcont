@@ -1,0 +1,25 @@
+<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="mobile_Default" %>
+<%@ Register TagPrefix="mobile" Namespace="System.Web.UI.MobileControls" Assembly="System.Web.Mobile" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<body>
+    
+     
+   
+    <mobile:Form id="Form1" runat="server">
+    
+    
+     <mobile:Label id="lblMensajeError" Visible="False"  runat="server" ForeColor="Red" >Los datos proporcionados no son correctos</mobile:Label>
+       <mobile:Label id="lblMensajeerror1" Visible="False"  runat="server" ForeColor="Red" ></mobile:Label>
+    
+    
+        <mobile:Label ID="Label1" Runat="server" Font-Bold="True">Login:</mobile:Label><br />
+        <mobile:TextBox ID="txtlogin" Runat="server" Size="25"></mobile:TextBox>
+        <mobile:Label ID="lblpass" Runat="server" Font-Bold="True">Password:</mobile:Label>
+        <mobile:TextBox ID="txtpassword" Runat="server" Password="True"  Size="26" ></mobile:TextBox>
+        <mobile:Command ID="btnEnviar" CausesValidation="true" Format="Button" Runat="server"   
+>Ingresar</mobile:Command>
+      
+    </mobile:Form>
+</body>
+</html>

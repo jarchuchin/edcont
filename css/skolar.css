@@ -1,0 +1,495 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+.footer {
+
+
+    position: absolute;
+    bottom: 0;
+    height: 35px;
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+    /*overflow: hidden;*/
+   /*background-color: deepskyblue;*/
+
+ 
+}
+.push {
+	height: 35px; /* .push must be the same height as .footer */
+}
+
+
+
+
+.bs-box {
+
+    margin-right:0;
+    margin-left:0;
+    background-color:#fff;
+    border-color:#ddd;
+    border-width:1px;
+    border-radius:4px 4px 0 0;
+    box-shadow:none;
+    border-style:solid;
+    padding-right:20px;
+    padding-left:20px;
+}
+    .bs-box h3 {
+    
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size:18px;
+    text-transform: uppercase;
+    color:#0099FF;
+
+    }
+
+.mensajeFinanzas {
+
+    padding-top:15px;
+    padding-right:15px;
+    height:270px; 
+    overflow-y: scroll;
+
+
+
+}
+
+.brand-icon {
+    width:35px;
+    height:35px;
+    float: left;
+}
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+
+.container .text-muted {
+  margin: 7px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: .83em;
+  white-space: nowrap;
+   
+}
+
+code {
+  font-size: 80%;
+}
+
+
+
+
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+
+/*########## signin #########*/
+
+
+
+/*
+ * Card component
+ */
+@media only screen and ( min-width: 992px )  /* Desktops >=992 and <1200px */
+{
+    .card {
+        /*position:absolute;*/
+        /*top: 50%;
+        left: 50%;*/
+        background-color: #F7F7F7;
+        /* just in case there no content*/
+        padding: 10px 25px 30px;
+      /* margin: auto 35%;*/ 
+        margin-top: 50px;
+        /* shadows and rounded borders */
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    }
+
+   
+
+
+}
+@media only screen and ( min-width: 300px ) and ( max-width: 991px )  /* Desktops >=992 and <1200px */
+{
+
+    .card {
+    
+        margin-top: 50px;
+    /* margin: auto 25%;*/
+
+    width:100%;
+    }
+   
+
+
+}
+
+  
+
+ .card-container.card {
+    width: 450px;
+    padding: 40px 40px;
+    background:rgba(247,247,247,0.9);
+
+}
+
+
+
+ .profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/*
+ * Form styles
+ */
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+    /*background-color: #4d90fe; */
+    /*background-color: rgb(104, 145, 162);
+    / background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 13px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+
+.forgot-password {
+    color: rgb(104, 145, 162);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus{
+    color: rgb(12, 97, 33);
+}
+
+
+
+
+
+
+/**********************TOP BARS***************************/
+.top-barFonts {
+
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:12px;
+    
+}
+.top-bar-dark {
+   background-color:black; 
+    /*background:  -webkit-gradient(linear,left top,left bottom,color-stop(0, #08548E),color-stop(1, #0099FF));
+	background:  -o-linear-gradient(bottom,  #08548E 0%, #0099FF 100%);
+	background:  -moz-linear-gradient(bottom, #08548E 0%, #0099FF 100%);
+	background:  -webkit-linear-gradient(bottom, #08548E 0%, #0099FF 100%);
+	background:  -ms-linear-gradient(bottom, #08548E 0%, #0099FF 100%);
+	background:  linear-gradient(to bottom, #08548E 0%, #0099FF 100%);
+    border:none;*/
+}
+
+.top-bar-light {
+  background-color: #f3f3f3;
+
+}
+  .top-bar-light .top-dark-right li {
+    border-color: #ddd; }
+
+.top-bar-light .top-dark-right li a:hover {
+  color: #32c5d2; }
+
+.top-bar-socials {
+  line-height: 18px;
+  padding-top: 5px; }
+  .top-bar-socials:after {
+    display: table;
+    clear: both;
+    content: ""; }
+  .top-bar-socials a {
+    margin: 0px 3px; }
+
+.top-dark-right {
+  margin: 0px;
+  padding: 0px; }
+
+.top-dark-right li {
+  line-height: 40px;
+  /*border-left: 1px solid #444;*/
+  padding: 0px 10px; }
+
+.top-dark-right li, .top-dark-right li a {
+  color: #bbb;
+  font-size: 12px; 
+}
+
+
+
+.top-dark-right li i {
+  margin-right: 5px; }
+
+.top-dark-right li a:hover {
+  color: #fff; }
+
+
+
+/***social icons small***/
+.social-icon-sm {
+  margin: 0 5px 5px 0;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  line-height: 30px !important;
+  color: #555;
+  text-shadow: none;
+  border-radius: 3px;
+  overflow: hidden;
+  display: block;
+  float: left;
+  text-align: center;
+  border: 1px solid #AAA; }
+  .social-icon-sm:hover {
+    border-color: transparent; }
+
+.social-icon-sm i {
+  display: block;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 30px;
+  position: relative; }
+  .social-icon-sm i:last-child {
+    color: #FFF !important; }
+
+.social-icon-sm:hover i:first-child {
+  margin-top: -30px; }
+
+si-border {
+  border: 1px solid #AAA !important; }
+
+.si-border-round {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%; }
+
+.si-dark-round {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%; }
+
+.si-gray-round {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%; }
+
+.si-gray {
+  background: #f3f3f3;
+  border: 0px; }
+
+.si-dark {
+  background-color: #333;
+  border: 0px !important;
+  color: #fff !important; }
+
+/**icons hover colored**/
+.si-colored-facebook, .si-facebook:hover {
+  background-color: #3B5998 !important; }
+
+.si-colored-twitter, .si-twitter:hover {
+  background-color: #00ACEE !important; }
+
+
+.si-dropbox:hover {
+  background-color: #3D9AE8 !important; }
+
+
+.si-phone:hover, .si-colored-phone {
+  background-color: #444 !important; }
+
+.si-behance:hover, .si-colored-behance {
+  background-color: #053eff !important; }
+
+.si-github:hover, .si-colored-github {
+  background-color: #171515 !important; }
+
+.si-stumbleupon:hover, .si-colored-stumbleupon {
+  background-color: #F74425 !important; }
+
+.si-email:hover, .si-colored-email {
+  background-color: #6567A5 !important; }
+
+
+
+.social-shortcodes .left-heading {
+  font-size: 30px;
+  text-transform: uppercase; }
+
+.grid-boxed {
+  border: 1px solid transparent;
+  padding: 20px; }
+
+.grid-boxed:hover {
+  border: 1px dashed #999; }
+
+.center_div{
+    margin: 0 auto;
+}
+
+.radio input[type=radio] {
+    margin-left:0px;
+}
+
+
+
+/*navbar collapse*/
+/* hide all (inactive) nested list */
+.bs-docs-sidebar .nav ul.nav {
+    display: none;           
+}
+/* show active nested list */
+.bs-docs-sidebar .nav>.active>ul.nav {
+    display: block;           
+}
+
+
+.treeView img { width:25px;  }
+
+
+.labelNormal input[type=radio] + label {
+font-weight:400;
+}
+.labelNormal input[type=checkbox] + label {
+font-weight:400;
+padding-left:5px;
+color:dimgray;
+}
+
+
+.control-label {
+
+     font-weight:bold;
+
+}
+
+
+.fondoBlanco {
+    background-color:white;
+}
+.table > thead > tr > th {
+border-top:none;
+
+}
+
+#container .table th {
+   background-color:white;
+   border-top:none;
+}
+
+
+.borderless td, .borderless th {
+    border: none;
+}
+
+
+
+
+.divPanelLink a:link, .divPanelLink a:visited{
+    color:dodgerblue;
+    text-decoration:none;
+}
+.divPanelLink a:hover {
+    text-decoration:underline;
+}
+
+
+
+/*#mainnav {
+    background-color: #DF162A;
+}*/

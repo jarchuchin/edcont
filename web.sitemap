@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/ AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title=""  description="" roles="*">
+        <siteMapNode url="~/sec/workbook/default.aspx" title="Home" description="The home page" roles="*" />
+        <siteMapNode url="~/sec/workbook/default2.aspx" title="Tab 1"  description="The first tab" roles="*" />
+        <siteMapNode url="~/sec/workbook/default3.aspx" title="Tab 2"  description="The second tab"   roles="*" />
+    </siteMapNode>
+</siteMap>
