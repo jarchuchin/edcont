@@ -4,13 +4,15 @@ Imports System.IO
 Partial Class Sec_Workbook_Controles_GeneralData
     Inherits System.Web.UI.UserControl
 
-    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load, Me.Load
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Me.Load
         'Introducir aquí el código de usuario para inicializar la página
         If Not IsPostBack Then
             llenarDrop()
             iniciarpagina()
         End If
     End Sub
+
+
 
     Sub iniciarpagina()
 
