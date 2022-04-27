@@ -9,7 +9,7 @@
         <div class="card card-container text-center">
             
             <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
-           <asp:Image ID="imgLogo" runat="server"  ImageUrl="~/images/skolar.png" Width="300px" meta:resourcekey="Image1Resource1"  />
+           <asp:Image ID="imgLogo" runat="server"  ImageUrl="~/images/logo2x.jpg" Width="300px" meta:resourcekey="Image1Resource1"  />
            <div style="height:50px;"></div>
             <p id="profile-name" class="profile-name-card"><asp:label id="lblLogin" runat="server" meta:resourcekey="lblLoginResource1"     ></asp:label></p>
             <div  class="form-signin">

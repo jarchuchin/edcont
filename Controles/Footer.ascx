@@ -37,7 +37,7 @@
             <!-- Remove the class name "show-fixed" and "hide-fixed" to make the content always appears. -->
             <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-            <p class="pad-lft"> Skolar &#0169;  Education Solutions Powered by Skolar Tech </p>
+            <p class="pad-lft"> Edcont &#0169;  Education Solutions Powered by edcont.com it solutions </p>
 
 
 

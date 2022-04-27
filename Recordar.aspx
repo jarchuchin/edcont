@@ -21,7 +21,7 @@
                    <div class="card card-container text-center">
             
            
-                        <asp:Image ID="Image1" runat="server"  ImageUrl="~/images/skolar.png" Width="300px"   />
+                        <asp:Image ID="Image1" runat="server"  ImageUrl="~/images/logo2x.jpg" Width="300px"   />
            
                             <p id="profile-name" class="profile-name-card"><asp:label id="lblLogin" runat="server" meta:resourcekey="lblLoginResource1"     ></asp:label></p>
                             <div  class="form-signin">
