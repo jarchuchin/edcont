@@ -21,7 +21,7 @@
         <!--================================-->
         <div class="navbar-header">
             <asp:HyperLink ID="lnkHome" NavigateUrl="~/sec/Home.aspx" CssClass="navbar-brand"  runat="server">
-                <asp:Image ID="imgLogo" runat="server" ImageUrl="~/images/skcolarIcon.png" ToolTip="Eskolar" CssClass="brand-icon" />
+                <asp:Image ID="imgLogo" runat="server" ImageUrl="~/images/logoRedondo.png" ToolTip="Eskolar" CssClass="brand-icon" />
                <%-- <div class="brand-title">
                     <span class="brand-text">Skolar</span>
                 </div>--%>
