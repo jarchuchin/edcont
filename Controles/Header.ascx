@@ -60,7 +60,7 @@
      <div class="container">
         <div class="row">
             <div class="col-md-5 col-sm-5"> <asp:hyperlink ID="lnklogo" cssClass="navbar-brand" NavigateUrl="~/Sec/Home.aspx" runat="server">
-                    <asp:Image ID="imgLogo" runat="server" ImageUrl="~/images/skcolarIcon.png" />
+                    <asp:Image ID="imgLogo" runat="server" ImageUrl="~/images/logoRedondo.png" />
                 </asp:hyperlink></div>
             <div class="col-md-1">
                
